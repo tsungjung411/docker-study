@@ -179,7 +179,6 @@
  - [Prometheus Operator 架构 - 每天5分钟玩转 Docker 容器技术（178）](https://www.cnblogs.com/CloudMan6/p/9148723.html)
  - [部署 Prometheus Operator - 每天5分钟玩转 Docker 容器技术（179）](https://www.cnblogs.com/CloudMan6/p/9162353.html)
  - [Kubernetes 集群日志管理 - 每天5分钟玩转 Docker 容器技术（180）](https://www.cnblogs.com/CloudMan6/p/9173360.html)
-
  - [预告 — 容器平台技术](https://www.cnblogs.com/CloudMan6/p/7834113.html)
  - [新书发布《每天5分钟玩转Docker容器技术》](https://www.cnblogs.com/CloudMan6/p/7594225.html)
  - [IT 人士如何避免中年危机？](https://www.cnblogs.com/CloudMan6/p/8415967.html)
