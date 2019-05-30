@@ -8,7 +8,8 @@
      - ```run```
        - run a command in a new container (執行某個 container)
      - ```-i, --interactive=false```
-       - Keep STDIN open even if not attached (啟用互動式輸入)
+       - Keep STDIN open even if not attached
+         <br>(啟用互動式輸入，若沒有設定就無法接收 container 回傳的訊息，如打 ```ls```, ```pwd``` 皆沒有回應)
      - ```-t, --tty=false```
        - Allocate a pseudo-TTY <br>(啟用終端機來連到這個 container，若沒有設定就變成常駐在背景下，無法互動)
        
