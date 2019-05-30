@@ -23,10 +23,9 @@
  - 主機與容器共享資料夾
    - 將主機目前目錄下的 MyProject 資料夾，掛到容器的 /MyProject
      <br>```docker run -it -v `pwd`/MyProject:/MyProject  ubuntu:18.04 bash```
-     <br>```-v, --volume=[]```
-     <br>Bind mount a volume
+     <br>指令說明：```-v, --volume=[]``` (Bind mount a volume)
    - 將容器的檔案擁有者 root 變更為 uid 1000
-     <br>```id```
+     <br>```id``` (查看目前使用者的 id，假設是 1000，然後將檔案擁有者與群組擁有者設為1000)
      <br>```chown -R 1000:1000 /MyProject```
 
  - [Docker容器内不能联网的6种解决方案](https://blog.csdn.net/yangzhenping/article/details/43567155)
