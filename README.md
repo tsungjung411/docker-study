@@ -24,6 +24,8 @@
    - 將主機目前目錄下的 MyProject 資料夾，掛到容器的 /MyProject
      <br>```$ docker run -it -v `pwd`/MyProject:/MyProject  ubuntu:18.04 bash```
      <br>指令說明：```-v, --volume=[]``` (Bind mount a volume)
+     <br>主機端的資料夾``` `pwd`/MyProject```，必須先存在
+
    - 將容器的檔案擁有者 root 變更為 uid 1000
      <br>```$ id``` (查看目前使用者的 id，假設是 1000，然後將檔案擁有者與群組擁有者設為1000)
      <br>```$ chown -R 1000:1000 /MyProject```
