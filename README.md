@@ -16,11 +16,10 @@
  - 查詢執行中的 container ID 以及對應的 image
    <br>```$ docker ps```
 
- - 提交並更新 image
-   - 說明：將目前的設定，另存到一個映像檔，亦可以覆寫原來的映像檔
-   - 指令：
-     <br>```$ docker commit container_id image_name:image_tag```
-     <br>```$ docker commit 4be0241e7fb1 ubuntu:18.04```
+ - 提交並更新映像檔(image)
+   - 說明：將目前的設定，另存到一個映像檔，亦可以覆寫到原來的映像檔
+   - 指令：```$ docker commit container_id image_name:image_tag```
+   - 範例：```$ docker commit 4be0241e7fb1 ubuntu:18.04```
 
  - 主機與容器共享資料夾
    - 將主機目前目錄下的 MyProject 資料夾，掛到容器的 /MyProject
