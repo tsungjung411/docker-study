@@ -20,9 +20,11 @@
    <br>```docker commit container_id image_name:image_tag```
    <br>```docker commit 4be0241e7fb1 ubuntu:18.04```
 
- - 掛載主機的儲存空間
-   - 將目前目錄下的 MyProject 資料夾，掛到容器的 MyProject
-   <br>```docker run -it -v `pwd`/MyProject:MyProject  ubuntu:18.04 bash```
+ - 主機與容器共享資料夾
+   - 將主機目前目錄下的 MyProject 資料夾，掛到容器的 /MyProject
+   <br>```docker run -it -v `pwd`/MyProject:/MyProject  ubuntu:18.04 bash```
+   <br>```-v, --volume=[]```
+   <br>Bind mount a volume
 
  - [Docker容器内不能联网的6种解决方案](https://blog.csdn.net/yangzhenping/article/details/43567155)
    - 使用 --dns 選項
