@@ -14,7 +14,7 @@
        - Allocate a pseudo-TTY <br>(啟用終端機來連到這個 container，若沒有設定就變成常駐在背景下，無法互動)
        
  - 查詢執行中的 container ID 以及對應的 image
-   ```docker ps```
+   <br>```docker ps```
 
 <br><br>
 
