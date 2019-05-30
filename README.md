@@ -16,6 +16,10 @@
  - 查詢執行中的 container ID 以及對應的 image
    <br>```docker ps```
 
+ - 提交更新 image
+   <br>```docker commit container_id image_name:image_tag```
+   <br>```docker commit 4be0241e7fb1 ubuntu:18.04```
+
 <br><br>
 
 ## 基礎學習資源
