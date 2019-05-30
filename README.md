@@ -1,3 +1,17 @@
+## 備忘錄
+ - 起一個 ubuntu
+   - Ubuntu 16.04
+     <br>```docker run -it ubuntu:16.04 bash```
+   - Ubuntu 18.04
+     <br>```docker run -it ubuntu:18.04 bash```
+   - 指令說明：
+     - run
+       - run a command in a new container (執行某個 container)
+     - -i, --interactive=false
+       - Keep STDIN open even if not attached (啟用互動式輸入)
+     - -t, --tty=false
+       - Allocate a pseudo-TTY <br>(啟用終端機來連到這個 container，若沒有設定就變成常駐在背景下，無法互動)
+
 ## 基礎學習資源
  - [写在最前面 - 每天5分钟玩转容器技术（1）](https://www.cnblogs.com/CloudMan6/p/6693772.html)
  - [容器生态系统 - 每天5分钟玩转容器技术（2）](https://www.cnblogs.com/CloudMan6/p/6706546.html)
