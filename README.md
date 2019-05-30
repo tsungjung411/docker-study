@@ -20,6 +20,10 @@
    <br>```docker commit container_id image_name:image_tag```
    <br>```docker commit 4be0241e7fb1 ubuntu:18.04```
 
+ - [Docker容器内不能联网的6种解决方案](https://blog.csdn.net/yangzhenping/article/details/43567155)
+   - 使用 --dns 選項
+     <br>```docker run --dns 8.8.8.8 --dns 8.8.4.4 -it ubuntu:16.04 bash```
+
 <br><br>
 
 ## 基礎學習資源
