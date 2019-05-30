@@ -1,4 +1,4 @@
-## 備忘錄
+## 建立基本的 Ubuntu 容器(Container)
  - 起一個 ubuntu
    - Ubuntu 16.04
      <br>```$ docker run -it ubuntu:16.04 bash```
@@ -16,9 +16,11 @@
  - 查詢執行中的 container ID 以及對應的 image
    <br>```$ docker ps```
 
- - 提交更新 image
-   <br>```$ docker commit container_id image_name:image_tag```
-   <br>```$ docker commit 4be0241e7fb1 ubuntu:18.04```
+ - 提交並更新 image
+   - 說明：將目前的設定，另存到一個映像檔，亦可以覆寫原來的映像檔
+   - 指令：
+     <br>```$ docker commit container_id image_name:image_tag```
+     <br>```$ docker commit 4be0241e7fb1 ubuntu:18.04```
 
  - 主機與容器共享資料夾
    - 將主機目前目錄下的 MyProject 資料夾，掛到容器的 /MyProject
