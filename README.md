@@ -228,3 +228,4 @@
 
 ## (非連貫的) 基礎學習資源
 - [10分钟看懂Docker和K8S](https://zhuanlan.zhihu.com/p/53260098)
+  <br>![](https://pic3.zhimg.com/80/v2-c2a31e2008835b2974170ad1dbac0d42_720w.jpg)
