@@ -223,3 +223,8 @@
  - [IT 人士如何避免中年危机？](https://www.cnblogs.com/CloudMan6/p/8415967.html)
  - [我所参加的最贵的培训](https://www.cnblogs.com/CloudMan6/p/8420654.html)
  - [鸡蛋该放在哪些篮子里？多少合适？](https://www.cnblogs.com/CloudMan6/p/8429931.html)
+
+<br><br>
+
+## (非連貫的) 基礎學習資源
+- [10分钟看懂Docker和K8S](https://zhuanlan.zhihu.com/p/53260098)
