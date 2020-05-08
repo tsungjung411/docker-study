@@ -52,6 +52,7 @@ docker stop ubuntu-base
 ```
 
 ## 生物資訊
+### 安裝 galaxy
 ```
 docker exec -it ubuntu-base bash
 cd /home
@@ -59,8 +60,9 @@ git clone https://github.com/galaxyproject/galaxy.git
 cd galaxy
 
 # 雖然 Galaxy 會安裝 virtualenv
-# 但安裝 Galaxy 過程還是會出錯
-virtualenv -p python2 env-python2
+# 但安裝 Galaxy 過程可能會出錯
+# 2020.05.08: 目前 galaxy 已經升版到 python 3.5
+virtualenv -p python3 env-python3
 source env-python2/bin/activate
 python -V
 
