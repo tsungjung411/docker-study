@@ -36,7 +36,13 @@ docker exec ubuntu-base git --help
 docker exec ubuntu-base apt install -y iputils-ping
 docker exec ubuntu-base ping -h
 
-docker commit 
+
+major=```lsb_release -r | egrep -o "[0-9.]+"```
+minor=```date +"-%Y%m%d-%H%M%S"```
+tag=ubuntu-$major$minor
+echo tag: $tag
+docker commit ubuntu-base ```echo $tag```
+docker images  # list the images
 ```
 
 ## 生物資訊
