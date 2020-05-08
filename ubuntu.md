@@ -52,3 +52,16 @@ docker stop ubuntu-base
 ```
 
 ## 生物資訊
+```
+docker exec -it ubuntu-base bash
+cd /home
+git clone https://github.com/galaxyproject/galaxy.git
+cd galaxy
+
+# 雖然 Galaxy 會安裝 virtualenv
+# 但安裝 Galaxy 過程還是會出錯
+virtualenv -p python2 env-python2
+source env-python2/bin/activate
+
+bash run.sh
+```
