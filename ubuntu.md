@@ -24,8 +24,8 @@ docker exec ubuntu-base python3 -V
 ## Python 3.8.2
 
 ## CMD: python (額外安裝 python 2.7)
-docker exec ubuntu-base apt install -y python
-docker exec ubuntu-base python -V
+# docker exec ubuntu-base apt install -y python
+# docker exec ubuntu-base python -V
 ## Python 2.7.18rc1
 
 ## CMD: virtualenv
