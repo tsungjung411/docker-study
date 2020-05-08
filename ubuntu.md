@@ -36,13 +36,16 @@ docker exec ubuntu-base git --help
 docker exec ubuntu-base apt install -y iputils-ping
 docker exec ubuntu-base ping -h
 
-
+# 儲存 container
 major=```lsb_release -r | egrep -o "[0-9.]+"```
 minor=```date +"-%Y%m%d-%H%M%S"```
 tag=ubuntu-$major$minor
 echo tag: $tag
 docker commit ubuntu-base ```echo $tag```
 docker images  # list the images
+
+# 停止執行中的 
+docker stop ubuntu-base
 ```
 
 ## 生物資訊
