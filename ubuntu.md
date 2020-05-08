@@ -28,6 +28,9 @@ docker exec ubuntu-base apt install -y python
 docker exec ubuntu-base python -V
 ## Python 2.7.18rc1
 
+## CMD: virtualenv
+docker exec ubuntu-base apt install virtualenv
+
 ## CMD: git
 docker exec ubuntu-base apt install -y git
 docker exec ubuntu-base git --help
