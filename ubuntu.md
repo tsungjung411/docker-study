@@ -62,6 +62,7 @@ cd galaxy
 # 但安裝 Galaxy 過程還是會出錯
 virtualenv -p python2 env-python2
 source env-python2/bin/activate
+python -V
 
 bash run.sh
 ```
