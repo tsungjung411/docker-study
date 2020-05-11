@@ -14,3 +14,8 @@ RUN apt install -y git
 WORKDIR galaxy
 RUN bash run.sh
 ```
+
+<br>
+
+## 參考資料
+- [生物資訊 / Galaxy 入門 / 安裝](https://hackmd.io/2uwnUsDkQ7uF9KfB8QTLQg#%E5%AE%89%E8%A3%9D-Galaxy)
