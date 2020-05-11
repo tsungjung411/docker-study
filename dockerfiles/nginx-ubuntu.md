@@ -22,8 +22,6 @@ CMD ["nginx", "-g", "daemon off;"]
 $ docker build --tag my-nginx:v1 mynginx/
 ```
 
-<br>
-
 ### 瀏覽 image 指令
 ```bash
 $ docker images
