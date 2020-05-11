@@ -4,15 +4,19 @@ FROM: ubuntu:20.04
 
 RUN apt update
 
-RUN apt install -y lsb-release
+RUN apt install -y lsb-release \
     && lsb_release -a
 
+RUN apt install virtualenv \
+    && apt install -y git
+
 WORKDIR /home
-RUN apt install -y git
-    && git clone https://github.com/galaxyproject/galaxy.git
+RUN git clone https://github.com/galaxyproject/galaxy.git
 
 WORKDIR galaxy
-RUN bash run.sh
+RUN virtualenv -p python3 env-python3 \
+    && source env-python3/bin/activate
+CMD ["bash", "run.sh"]
 ```
 
 <br>
