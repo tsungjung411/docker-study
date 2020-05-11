@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y nginx
 
 # test index.html
-COPY index.html /usr/share/nginx/html/my-index-1.html
+COPY index.html /usr/share/nginx/html/my-index-1.html   # 404 Not Found
 COPY index.html /var/www/html/my-index-2.html
 
 # export the ports: 80/81/8080
@@ -39,8 +39,8 @@ $ docker run --name my-nginx -p 81:80 -d my-nginx:v1
 測試網頁
 - http://localhost:81/
 - http://127.0.0.1:81/
-- http://localhost:81/index.html
-- http://localhost:81/my-index-1.html
+- http://localhost:81/index.html  # 404 Not Found
+- http://localhost:81/my-index-1.html  # 404 Not Found
 - http://localhost:81/my-index-2.html
 
 ### 查看啟用的 container
