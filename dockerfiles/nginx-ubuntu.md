@@ -27,7 +27,6 @@ $ docker build --tag my-nginx:v1 mynginx/
 ### 瀏覽 image 指令
 ```bash
 $ docker images
-
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 my-nginx            v1                  f1cef06fbe7a        53 seconds ago      154MB
 ```
@@ -37,7 +36,32 @@ my-nginx            v1                  f1cef06fbe7a        53 seconds ago      
 $ docker run --name my-nginx -p 80:80 -d my-nginx:v1 
 ```
 測試網頁
-http://localhost:80/
-http://127.0.0.1:80/
+- http://localhost:80/
+- http://127.0.0.1:80/
 
+### 查看啟用的 container
+```
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+72cdb58c4a27        my-nginx:v1         "nginx -g 'daemon of…"   39 seconds ago      Up 37 seconds       0.0.0.0:80->80/tcp   my-nginx
+```
+
+### 連線到 container
+```bash
+$ docker exec -it my-nginx bash
+```
+
+### 結束該 container
+```bash
+$ docker rm -f my-nginx
+```
+
+### 移除該 image
+```bash
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+my-nginx            v1                  f1cef06fbe7a        53 seconds ago      154MB
+
+$ docker rmi my-nginx:v1
+```
 
