@@ -41,7 +41,7 @@ $ docker run --name my-nginx -p 81:80 -d my-nginx:v1
 - http://127.0.0.1:81/
 - http://localhost:81/index.html  # 404 Not Found
 - http://localhost:81/my-index-1.html  # 404 Not Found
-- http://localhost:81/my-index-2.html
+- http://localhost:81/my-index-2.html  # file: /var/www/html/index.nginx-debian.html
 
 ### 查看啟用的 container
 ```
@@ -53,6 +53,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ### 連線到 container
 ```bash
 $ docker exec -it my-nginx bash
+
+# 檢查複製過來的檔案
+$ ls /usr/share/nginx/html/
+$ ls /var/www/html
 ```
 
 ### 結束該 container
