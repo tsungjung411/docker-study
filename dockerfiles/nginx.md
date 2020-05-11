@@ -1,5 +1,6 @@
 ## nginx
 
+### 範例1
 底下範例，取自 [9789572246559-Docker 這樣學才有趣：從入門，到玩直播、挖礦](https://www.tenlong.com.tw/products/9789572246559)
 
 ```dockerfile
@@ -37,3 +38,7 @@ W: Failed to fetch http://nginx.org/packages/mainline/debian/dists/jessie/InRele
 
 E: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
+
+
+### 範例2
+官方範例：https://github.com/nginxinc/docker-nginx/blob/f4d30145c60c433966df96f618d78513fee9d322/mainline/stretch/Dockerfile
