@@ -8,9 +8,12 @@ FROM ubuntu:20.04
 RUN apt-get update \
     && apt-get install -y nginx
 
-COPY index.html /usr/share/nginx/html
+# test index.html
+COPY index.html /usr/share/nginx/html/my-index-1.html
+COPY index.html /var/www/html/my-index-2.html
 
-EXPOSE 80
+# export the ports: 80/81/8080
+EXPOSE 80 81 8080
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
@@ -31,11 +34,14 @@ my-nginx            v1                  f1cef06fbe7a        53 seconds ago      
 
 ### 根據此 image，啟用一個 container
 ```bash
-$ docker run --name my-nginx -p 80:80 -d my-nginx:v1 
+$ docker run --name my-nginx -p 81:80 -d my-nginx:v1 
 ```
 測試網頁
-- http://localhost:80/
-- http://127.0.0.1:80/
+- http://localhost:81/
+- http://127.0.0.1:81/
+- http://localhost:81/index.html
+- http://localhost:81/my-index-1.html
+- http://localhost:81/my-index-2.html
 
 ### 查看啟用的 container
 ```
