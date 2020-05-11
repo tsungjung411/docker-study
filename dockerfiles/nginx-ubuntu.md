@@ -5,16 +5,18 @@
 ```dockerfile
 FROM ubuntu:20.04
 
+# 安裝 nginx 軟體
 RUN apt-get update \
     && apt-get install -y nginx
 
-# test index.html
+# 測試 index.html
 COPY index.html /usr/share/nginx/html/my-index-1.html   # 404 Not Found
 COPY index.html /var/www/html/my-index-2.html
 
-# export the ports: 80/81/8080
+# 將 container 的埠 80/81/8080，開方給主機連線
 EXPOSE 80 81 8080
 
+# 啟動 container 後要執行的指令
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
