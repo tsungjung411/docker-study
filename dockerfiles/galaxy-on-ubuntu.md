@@ -7,7 +7,7 @@ RUN apt update
 RUN apt install -y lsb-release \  # will also install python3 (python 3.8)
     && lsb_release -a
 
-RUN apt install virtualenv \
+RUN apt install -y virtualenv \
     && apt install -y git
 
 WORKDIR /home
