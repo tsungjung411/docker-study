@@ -9,7 +9,6 @@ RUN apt update
 # will also install python3 (python 3.8)
 RUN apt install -y lsb-release \
     && lsb_release -a \
-    && python -V \
     && python3 -V
 
 
@@ -19,9 +18,9 @@ RUN apt install -y virtualenv \
 
 WORKDIR galaxy
 RUN virtualenv -p python3 .venv \
+    && ls -al \
     && source .venv/bin/activate
 CMD ["bash", "run.sh"]
-
 ```
 
 <br>
