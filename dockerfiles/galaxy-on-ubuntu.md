@@ -1,22 +1,27 @@
 ## Galaxy
 ```dockerfile
-FROM: ubuntu:20.04
+FROM ubuntu:20.04
+
+WORKDIR /home
 
 RUN apt update
 
-RUN apt install -y lsb-release \  # will also install python3 (python 3.8)
-    && lsb_release -a
+# will also install python3 (python 3.8)
+RUN apt install -y lsb-release \
+    && lsb_release -a \
+    && python -V \
+    && python3 -V
+
 
 RUN apt install -y virtualenv \
-    && apt install -y git
-
-WORKDIR /home
-RUN git clone https://github.com/galaxyproject/galaxy.git
+    && apt install -y git \
+    && git clone https://github.com/galaxyproject/galaxy.git
 
 WORKDIR galaxy
-RUN virtualenv -p python3 env-python3 \
-    && source env-python3/bin/activate
+RUN virtualenv -p python3 .venv \
+    && source .venv/bin/activate
 CMD ["bash", "run.sh"]
+
 ```
 
 <br>
