@@ -62,8 +62,9 @@ $ bash run.sh
 ```
 | Ubuntu | Python | State |
 |--------|--------|-------|
-| 20.04  | 3.5.9  | Failed |
-| 20.04  | 3.6.10 | Failed |
-| 20.04  | 3.7.3 (from [Anaconda3-2019.03-Linux-x86_64.sh](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart))  | Successful |
-| 20.04  | 3.7.7  | Failed |
-| 20.04  | 3.8.2  | Failed |
+| 20.04  | 3.5.9  | 失敗 |
+| 20.04  | 3.6.10 | 失敗 |
+| 20.04  | 3.7.3 (from [Anaconda3-2019.03-Linux-x86_64.sh](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)) <br>(再建一個虛擬環境，在裡面跑 bash run.sh) | 成功 |
+| 20.04  | 3.7.3 (from [Anaconda3-2019.03-Linux-x86_64.sh](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)) <br>(直接執行 bash run.sh) | 成功 |
+| 20.04  | 3.7.7  | 失敗 |
+| 20.04  | 3.8.2  | 失敗 |
