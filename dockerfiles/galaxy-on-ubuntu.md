@@ -68,4 +68,5 @@ $ bash run.sh
     <tr><td>3.7.3 (from <a href="https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart">Anaconda3-2019.03-Linux-x86_64.sh</a>)<br>(直接執行 bash run.sh)</td><td>成功</td></tr>
     <tr><td>3.7.7</td><td>失敗</td></tr>
     <tr><td>3.8.2</td><td>失敗</td></tr>
+    <tr><td>18.04</td><td>3.6.9</td><td>成功?</td></tr>
 </table>
