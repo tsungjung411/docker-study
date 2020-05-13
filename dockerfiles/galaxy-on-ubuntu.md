@@ -76,4 +76,5 @@ $ bash run.sh
     <tr><td rowspan=6>18.04</td><td>3.5.9</td><td><b>成功</b></td></tr>
     <tr><td>3.6.9</td><td><b>成功</b></td></tr>
     <tr><td>3.7.5</td><td><b>成功</b></td></tr>
+    <tr><td>8.3.0</td><td><b>成功</b></td></tr>
 </table>
