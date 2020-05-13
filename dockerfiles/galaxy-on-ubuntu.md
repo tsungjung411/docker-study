@@ -46,9 +46,23 @@ $ bash run.sh
       - `pip install .`       (from a git repo or downloaded source
                                release)
       - `pip install numpy`   (last NumPy release on PyPi)
+    
+    
+    blas_opt_info:
+    blas_mkl_info:
+    customize UnixCCompiler
+      libraries mkl_rt not found in ['/home/galaxy/.venv/lib', '/usr/local/lib', '/usr/lib64', '/usr/lib']
+      NOT AVAILABLE
+    
+    blis_info:
+    customize UnixCCompiler
+      libraries blis not found in ['/home/galaxy/.venv/lib', '/usr/local/lib', '/usr/lib64', '/usr/lib']
+      NOT AVAILABLE
 ...
 ```
 | Ubuntu | Python | State |
 |--------|--------|-------|
-| 20.04  | 3.5    | Failed |
-| 20.04  | 3.6    | Failed |
+| 20.04  | 3.5.9  | Failed |
+| 20.04  | 3.6.10 | Failed |
+| 20.04  | 3.7.7  | Failed |
+| 20.04  | 3.8.2  | Failed |
