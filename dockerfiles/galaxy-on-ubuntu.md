@@ -22,15 +22,12 @@ RUN virtualenv -p python3 .venv \
     && source .venv/bin/activate
 CMD ["bash", "run.sh"]
 ```
+- 參考資料
+  - [生物資訊 / Galaxy 入門 / 安裝](https://hackmd.io/2uwnUsDkQ7uF9KfB8QTLQg#%E5%AE%89%E8%A3%9D-Galaxy)
 
 <br>
 
 ## [安裝 python](../錯誤排除紀錄.md#python)
-
-<br>
-
-## 參考資料
-- [生物資訊 / Galaxy 入門 / 安裝](https://hackmd.io/2uwnUsDkQ7uF9KfB8QTLQg#%E5%AE%89%E8%A3%9D-Galaxy)
 
 <br>
 
