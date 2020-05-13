@@ -1,4 +1,4 @@
-## Galaxy
+## Dockerfile (安裝 Galaxy)
 ```dockerfile
 FROM ubuntu:20.04
 
@@ -22,6 +22,10 @@ RUN virtualenv -p python3 .venv \
     && source .venv/bin/activate
 CMD ["bash", "run.sh"]
 ```
+
+<br>
+
+## [安裝 python](../錯誤排除紀錄.md#python)
 
 <br>
 
