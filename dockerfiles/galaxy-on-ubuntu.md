@@ -48,3 +48,7 @@ $ bash run.sh
       - `pip install numpy`   (last NumPy release on PyPi)
 ...
 ```
+| Ubuntu | Python | State |
+|--------|--------|-------|
+| 20.04  | 3.5    | Failed |
+| 20.04  | 3.6    | Failed |
