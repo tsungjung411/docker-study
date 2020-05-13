@@ -27,7 +27,7 @@ CMD ["bash", "run.sh"]
 <br>
 
 ## 收集到的錯誤訊息
-### Case1
+### Case1: failed to install numpy
 ```bash
 $ bash run.sh
 ...
