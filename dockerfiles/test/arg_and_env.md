@@ -163,4 +163,5 @@ HOME=/root
 docker rm -f my-nginx-container
 docker rmi my-nginx:latest
 docker images
+ 
 ```
