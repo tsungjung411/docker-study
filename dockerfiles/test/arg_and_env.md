@@ -103,7 +103,7 @@ ENV env_author_6_A=$variable_not_exist
 docker build \
 --tag my-nginx mynginx2 \
 --build-arg arg_author_3=ooxx3 \
---build-arg arg_author_5=ooxx5
+--build-arg env_author_5=ooxx5
  
 ```
 
