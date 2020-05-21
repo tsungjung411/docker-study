@@ -17,24 +17,37 @@ FROM nginx
 # ============================================
 ENV env_author_1_1=env_tj_tsai_1
 ENV env_author_1_2="env_tj_tsai_1"
+ENV env_author_1_3 env_tj_tsai_1
+ENV env_author_1_4 "env_tj_tsai_1"
 
 ## 是字串，不是變數
 RUN echo [1] env_author_1_1=env_author_1_1
+RUN echo [1] env_author_1_2=env_author_1_2
+RUN echo [1] env_author_1_3=env_author_1_3
+RUN echo [1] env_author_1_4=env_author_1_4
+
 ## 是變數，不是字串
 RUN echo [1] env_author_1_1=$env_author_1_1
-## 是字串，不是變數
-RUN echo [1] env_author_1_2=env_author_1_2
-## 是變數，不是字串
 RUN echo [1] env_author_1_2=$env_author_1_2
+RUN echo [1] env_author_1_3=$env_author_1_3
+RUN echo [1] env_author_1_4=$env_author_1_4
+
+RUN echo [1] env_author_1_1=${env_author_1_1}
+RUN echo [1] env_author_1_2=${env_author_1_2}
+RUN echo [1] env_author_1_3=${env_author_1_3}
+RUN echo [1] env_author_1_4=${env_author_1_4}
 
 
 # ============================================
 # 測試2：內建的 docerfile 變數
 # ============================================
 ## 不會設定到 env
-ARG arg_author_2=arg_tj_tsai_2
-RUN echo [2] arg_author_2=$arg_author_2
-RUN echo [2] arg_author_2=${arg_author_2}
+ARG arg_author_2_1=arg_tj_tsai_2
+ARG arg_author_2_2 arg_tj_tsai_2
+RUN echo [2] arg_author_2_1=$arg_author_2_1
+RUN echo [2] arg_author_2_1=${arg_author_2_1}
+RUN echo [2] arg_author_2_2=$arg_author_2_2
+RUN echo [2] arg_author_2_2=${arg_author_2_2}
 
 
 # ==============================================================
