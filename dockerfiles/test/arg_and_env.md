@@ -133,7 +133,7 @@ docker exec my-nginx-container env
 執行結果
 ```bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME=0a968b8a4ce7
+HOSTNAME=a3a3f8319939
 NGINX_VERSION=1.17.10
 NJS_VERSION=0.3.9
 PKG_RELEASE=1~buster
@@ -153,7 +153,6 @@ env_author_6_7=ooxx1
 env_author_6_8=ooxx4
 env_author_6_9=ooxx4
 env_author_6_A=
-
 HOME=/root
 ```
 
