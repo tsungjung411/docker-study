@@ -43,11 +43,10 @@ RUN echo [1] env_author_1_4=${env_author_1_4}
 # ============================================
 ## 不會設定到 env
 ARG arg_author_2_1=arg_tj_tsai_2
-ARG arg_author_2_2 arg_tj_tsai_2
+## ARG 需要 '=' 
+#ARG arg_author_2_2 arg_tj_tsai_2
 RUN echo [2] arg_author_2_1=$arg_author_2_1
 RUN echo [2] arg_author_2_1=${arg_author_2_1}
-RUN echo [2] arg_author_2_2=$arg_author_2_2
-RUN echo [2] arg_author_2_2=${arg_author_2_2}
 
 
 # ==============================================================
