@@ -14,29 +14,31 @@ ENV env_author_1_1=env_tj_tsai_1
 ENV env_author_1_2="env_tj_tsai_1"
 
 ## 是字串，不是變數
-RUN echo [1] >> env_author_1_1=env_author_1_1
+RUN echo [1] env_author_1_1=env_author_1_1
 ## 是變數，不是字串
-RUN echo [1] >> env_author_1_1=$env_author_1_1
+RUN echo [1] env_author_1_1=$env_author_1_1
 ## 是字串，不是變數
-RUN echo [1] >> env_author_1_2=env_author_1_2
+RUN echo [1] env_author_1_2=env_author_1_2
 ## 是變數，不是字串
-RUN echo [1] >> env_author_1_2=$env_author_1_2
+RUN echo [1] env_author_1_2=$env_author_1_2
 
 
 # ============================================
 # 測試2：內建的 docerfile 變數
 # ============================================
 ## 不會設定到 env
-ARG arg_author_2=arg_author_2
-RUN echo [2] >> arg_author_2=$arg_author_2
+ARG arg_author_2=arg_tj_tsai_2
+RUN echo [2] arg_author_2=$arg_author_2
+RUN echo [2] arg_author_2=${arg_author_2}
 
 
 # ==============================================================
 # 測試3：外部引入的 docerfile 變數 --build-arg arg_author_3=ooxx3
 # ==============================================================
 ## 不會設定到 env
-ARG arg_author_3=arg_author_3
-RUN echo [3] >> arg_author_3=$arg_author_3
+ARG arg_author_3=arg_tj_tsai_3
+RUN echo [3] arg_author_3=$arg_author_3
+RUN echo [3] arg_author_3=${arg_author_3}
 
 
 # =============================================================
@@ -50,8 +52,8 @@ ENV env_author_4_1=env_author_4
 ## 是變數，不是字串
 ENV env_author_4_2=$env_author_4
 
-RUN echo [4] >> env_author_4_1=$env_author_4_1
-RUN echo [4] >> env_author_4_2=$env_author_4_2
+RUN echo [4] env_author_4_1=$env_author_4_1
+RUN echo [4] env_author_4_2=$env_author_4_2
 
 
 # =================================================================
@@ -66,8 +68,8 @@ ENV env_author_5_1=env_author_5
 ## 是變數，不是字串
 ENV env_author_5_2=$env_author_5
 
-RUN echo [5] >> env_author_5_1=$env_author_5_1
-RUN echo [5] >> env_author_5_2=$env_author_5_2
+RUN echo [5] env_author_5_1=$env_author_5_1
+RUN echo [5] env_author_5_2=$env_author_5_2
 
 
 # CMD ["nginx", "-g", "daemon off;"]
