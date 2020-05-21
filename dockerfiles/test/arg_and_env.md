@@ -146,3 +146,10 @@ env_author_6_A=
 
 HOME=/root
 ```
+
+## 結束測試，清除暫存檔
+```bash
+docker rm -f my-nginx-container
+docker rmi my-nginx:latest
+docker images
+```
