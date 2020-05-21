@@ -1,8 +1,12 @@
 
 ## 測試 ARG 和 ENV 的差異
+
+### 三個原則
 - ARG 就是 Dockerfile 裡面的變數(key=value)，並不會新增到 env 環境變數
 - ENV 亦是 Dockerfile 裡面的變數(key=value)(同 ARG 功能)，並將該變數(key=value)新增到 env 環境變數中
 - 當 ARG 與 ENV 有同名的變數時，ENV 優先權高於 ARG，詳見「**測試6**」
+
+<br>
 
 ### Dockerfile
 ```dockerfile
@@ -98,6 +102,8 @@ ENV env_author_6_A=$variable_not_exist
 # CMD ["nginx", "-g", "daemon off;"]
 ```
 
+<br>
+
 ## 建置映像檔
 ```bash
 docker build \
@@ -107,6 +113,8 @@ docker build \
  
 ```
 
+<br>
+
 ## 載入映像檔
 ```bash
 docker run --name my-nginx-container -d -p 8080:80 my-nginx
@@ -115,6 +123,8 @@ docker run --name my-nginx-container -d -p 8080:80 my-nginx
 docker ps -a
 ```
 - 用瀏覽器檢視 http://localhost:8080/
+
+<br>
 
 ## 檢視環境變數
 ```bash
@@ -146,6 +156,8 @@ env_author_6_A=
 
 HOME=/root
 ```
+
+<br>
 
 ## 結束測試，清除暫存檔
 ```bash
