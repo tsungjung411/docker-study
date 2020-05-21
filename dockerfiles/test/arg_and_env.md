@@ -52,10 +52,21 @@ RUN echo [5] >> env_author_5_2=$env_author_5_2
 # CMD ["nginx", "-g", "daemon off;"]
 ```
 
-## docker build
+## 建置映像檔
 ```bash
 docker build \
 --tag my-nginx mynginx2 \
 --build-arg arg_author_3=ooxx3 \
 --build-arg env_author_5=ooxx5
+
+```
+
+## 載入映像檔
+```bash
+docker run --name my-nginx-container -d -p 8080:80 my-nginx
+```
+
+## 檢視環境變數
+```bash
+docker exec my-nginx-container env
 ```
