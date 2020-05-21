@@ -43,7 +43,7 @@ RUN echo [1] env_author_1_4=${env_author_1_4}
 # ============================================
 ## 不會設定到 env
 ARG arg_author_2_1=arg_tj_tsai_2
-## ARG 需要 '=' 
+## ARG 需要 '=' , Error: ARG requires exactly one argument
 #ARG arg_author_2_2 arg_tj_tsai_2
 RUN echo [2] arg_author_2_1=$arg_author_2_1
 RUN echo [2] arg_author_2_1=${arg_author_2_1}
@@ -145,12 +145,14 @@ docker exec my-nginx-container env
 執行結果
 ```bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME=a3a3f8319939
+HOSTNAME=f8b464da20fe
 NGINX_VERSION=1.17.10
 NJS_VERSION=0.3.9
 PKG_RELEASE=1~buster
 env_author_1_1=env_tj_tsai_1
 env_author_1_2=env_tj_tsai_1
+env_author_1_3=env_tj_tsai_1
+env_author_1_4=env_tj_tsai_1
 env_author_4=env_tj_tsai_4
 env_author_4_1=env_author_4
 env_author_4_2=env_tj_tsai_4
