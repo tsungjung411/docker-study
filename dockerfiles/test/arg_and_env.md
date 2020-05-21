@@ -95,3 +95,20 @@ docker ps -a
 ```bash
 docker exec my-nginx-container env
 ```
+執行結果
+```bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=0a968b8a4ce7
+NGINX_VERSION=1.17.10
+NJS_VERSION=0.3.9
+PKG_RELEASE=1~buster
+env_author_1_1=env_tj_tsai_1
+env_author_1_2=env_tj_tsai_1
+env_author_4=env_tj_tsai_4
+env_author_4_1=env_author_4
+env_author_4_2=env_tj_tsai_4
+env_author_5=env_tj_tsai_5
+env_author_5_1=env_author_5
+env_author_5_2=env_tj_tsai_5
+HOME=/root
+```
