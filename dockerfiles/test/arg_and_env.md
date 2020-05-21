@@ -2,6 +2,7 @@
 ## 測試 ARG 和 ENV 的差異
 - ARG 就是 Dockerfile 裡面的變數(key=value)，並不會新增到 env 環境變數
 - ENV 是將變數(key=value)新增到 env 環境變數中
+- 當 ARG 與 ENV 有同明得變數時，ENV 優先權高於 ARG
 
 ### Dockerfile
 ```dockerfile
