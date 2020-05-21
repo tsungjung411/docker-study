@@ -68,6 +68,7 @@ docker run --name my-nginx-container -d -p 8080:80 my-nginx
 # 檢視執行狀態，查看 STATUS
 docker ps -a
 ```
+- 用瀏覽器檢視 http://localhost:8080/
 
 ## 檢視環境變數
 ```bash
