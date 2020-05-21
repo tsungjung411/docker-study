@@ -4,7 +4,7 @@
 - ENV 是將變數(key=value)新增到 env 環境變數中
 
 ### Dockerfile
-```docerfile
+```dockerfile
 FROM nginx
 
 
