@@ -2,7 +2,7 @@
 ## 測試 ARG 和 ENV 的差異
 - ARG 就是 Dockerfile 裡面的變數(key=value)，並不會新增到 env 環境變數
 - ENV 亦是 Dockerfile 裡面的變數(key=value)(同 ARG 功能)，並將該變數(key=value)新增到 env 環境變數中
-- 當 ARG 與 ENV 有同名的變數時，ENV 優先權高於 ARG
+- 當 ARG 與 ENV 有同名的變數時，ENV 優先權高於 ARG，詳見「**測試6**」
 
 ### Dockerfile
 ```dockerfile
@@ -82,6 +82,8 @@ ARG arg_author_6_3=$env_author_6_1
 ENV env_author_6_4=arg_author_6_2
 ENV env_author_6_5=$arg_author_6_3
 
+## 當 ARG 與 ENV 有同名的變數時，ENV 優先權高於 ARG
+## 亦即，先去 env 環境變數尋找，沒有再去 ARG 變數尋找
 ENV env_author_6_6=ooxx1
 ARG env_author_6_6=ooxx2
 ENV env_author_6_7=$env_author_6_6
@@ -89,6 +91,8 @@ ENV env_author_6_7=$env_author_6_6
 ARG env_author_6_8=ooxx3
 ENV env_author_6_8=ooxx4
 ENV env_author_6_9=$env_author_6_8
+
+ENV env_author_6_A=$variable_not_exist
 
 
 # CMD ["nginx", "-g", "daemon off;"]
@@ -134,5 +138,11 @@ env_author_5_2=env_tj_tsai_5
 env_author_6_1=env_tj_tsai_6_1
 env_author_6_4=arg_author_6_2
 env_author_6_5=env_tj_tsai_6_1
+env_author_6_6=ooxx1
+env_author_6_7=ooxx1
+env_author_6_8=ooxx4
+env_author_6_9=ooxx4
+env_author_6_A=
+
 HOME=/root
 ```
