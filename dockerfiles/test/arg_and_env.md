@@ -5,6 +5,9 @@
 - ARG 就是 Dockerfile 裡面的變數(key=value)，並不會新增到 env 環境變數
 - ENV 亦是 Dockerfile 裡面的變數(key=value)(同 ARG 功能)，並將該變數(key=value)新增到 env 環境變數中
 - 當 ARG 與 ENV 有同名的變數時，ENV 優先權高於 ARG，詳見「**測試6**」
+- 語法差異：
+  - ENV: ```key=value``` 或 ```key value```
+  - ARG: ```key=value```
 
 <br>
 
